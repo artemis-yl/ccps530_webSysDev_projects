@@ -1,0 +1,15 @@
+1) created index.html with "hello"
+    - we see that when opening with Live Server, it uses localhost/127.0.0.1
+2) via git bash, ping torontomu.ca
+    $ ping torontomu.ca
+
+    Pinging torontomu.ca [141.117.126.202] with 32 bytes of data:
+    Reply from 141.117.126.202: bytes=32 time=16ms TTL=247
+    Reply from 141.117.126.202: bytes=32 time=15ms TTL=247
+    Reply from 141.117.126.202: bytes=32 time=15ms TTL=247
+    Reply from 141.117.126.202: bytes=32 time=34ms TTL=247
+
+    Ping statistics for 141.117.126.202:
+        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 15ms, Maximum = 34ms, Average = 20ms

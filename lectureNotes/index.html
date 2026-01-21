@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Test webpage for lecture 1</title>
+        <style>
+            body {
+                background-color: powderblue;
+            }
+        
+            h1 {
+                color: blue;
+                font-family: verdana;
+                font-size: 300%;
+            }
+        
+            p {
+                color: black;
+                font-family: courier;
+                font-size: 160%;
+                border: 1px solid rgb(21, 142, 158);
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+
+            th, td {
+                padding: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>My First Heading</h1>
+        <p>My first paragraph.</p>
+
+        <p title="I'm a tooltip">I have a tooltip, hover over me!</p>
+
+        <a href="http://www.torontomu.ca">Toronto Metropolitan University</a>
+
+        <pre>
+        My Bonnie lies over the ocean.
+        My Bonnie lies over the sea.
+        My Bonnie lies over the ocean.
+        Oh, bring back my Bonnie to me.
+        </pre>
+
+        <!-- Inline CSS overide Internal CSS example -->
+
+        <p style="color:red"> Second paragraph with <br> line breaks <br> and a different color</p>
+
+        <!-- Text Formatting Elements -->
+
+        <p> <b>bolded text</b> 
+            <br>
+            <strong> - Important text </strong> 
+            <br>
+            <i> Italic text </i> 
+            <br>
+            <em> Emphasized text </em> 
+            <br>
+            <mark> Marked text </mark> 
+            <br>
+            <small> Small text </small> 
+            <br>
+            <del> Deleted text </del> 
+            <br>
+            <ins> Inserted text </ins> 
+            <br>
+            text<sub>Subscript text</sub> 
+            <br>
+            text<sup>Superscript text</sup> 
+        </p>
+
+        <!-- Image -->
+
+        <img src="https://looka.com/wp-content/themes/looka/images/logos/looka_logo_black.svg" style="width:128px;height:auto;">
+
+        <!-- Table -->
+
+        <table style="width:100%">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Talis</td>
+                <td>21</td>
+            </tr>
+        </table>
+
+        <!-- Unordered Line -->
+
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <!-- Canvas and script examples -->
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d811ce;"> Your browser does not support the HTML5 canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+        </script>
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d811ce;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d811ce;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("Hello World", 10, 50);
+        </script>
+
+    </body>
+
+</html>
