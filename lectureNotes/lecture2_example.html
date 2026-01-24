@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--To ensure page renders at width of browser-->
+        <meta name="viewport" content="width=device-width"> 
+        <title>lecture 2 example page</title>
+        <link rel="stylesheet" href="lecture2_example.css">
+
+        <!--not used: internal CSS-->
+        <style>
+            /* can also load external style sheet like this 
+             * @import url("css/style.css"); 
+            */
+        </style>
+
+        <!-- Scripts commonly in HEAD, but can be in body AND external .js file-->
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Paragraph changed.";
+            }
+        </script>
+        
+    </head>
+
+    <body>
+        <h1> Lecture 2 Demo: CSS, Javascrpt, JQuery, Bootstrap</h1>
+
+        <h2>CSS</h2>
+
+        <h3>H3 test</h3>
+        <p>a regular paragraph</p>
+        <p class="blue"> a paragraph of class blue</p>
+
+        <section id="unique-box">
+            <p>i am inside an ID selector "unique-box" applied to a section tag</p>
+        </section>
+
+        <ul>
+            <li> i have a square, not default circle</li>
+            <li> the all selector margin makes me a tad wonky </li>
+        </ul>
+
+        <a href="https://github.com/artemis-yl"> Sample link to my github</a>
+
+        <br>
+
+        <a href="https://github.com/artemis-yl" class="button"> My github</a>
+
+        <div>
+            <p>show css box and overflow</p>
+        </div>
+
+        <h2>Javascript</h2>
+
+        <p id="demo">JavaScript can change HTML content.</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+
+        <script src="lecture2_script.js"></script>
+
+        <p id="demo2">I will be chnaged by an external script.</p>
+        <button type="button" onclick="myFunctionExt()">Try it</button>
+
+        <br>
+
+        <button onclick="document.write(5 + 6)">document.write() type script</button>
+
+        <br>
+        <!-- Creates an alert box -->
+        <!-- <script>window.alert(5 + 6);</script> -->
+
+        <br>
+        <!-- is used for debugging -->
+        <!-- <script> console.log(5 + 6);</script> -->
+
+        <p id="demoMath">I will show some math</p>
+        <button type="button" onclick="myFunctionMath()">Click Me for Math!</button>
+        
+        <br>
+
+         <script>
+            var car = {type:"Fiat", model:"500", color:"white"};
+            document.getElementById("demoCar").innerHTML = car.type;
+        </script>
+        <p id="demoCar">Car object : you see me if my script is before my block</p>
+        <script>
+            var car = {type:"Fiat", model:"500", color:"white"};
+            document.getElementById("demoCar").innerHTML = car.type;
+        </script>
+
+        <p id="demoCar">Car object : you see me if my script is before my block</p>
+
+
+        <br>
+
+        <button onclick="document.getElementById('date').innerHTML=Date()">The time is?</button>
+        <p id="date"></p>
+
+        <p id="person"></p>
+
+        <script>
+            var person = {
+                firstName: "John",
+                lastName : "Doe",
+                id : 5566,
+                fullName : function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+            document.getElementById("person").innerHTML = person.fullName();
+        </script>
+
+        <p id="prototype"></p>
+        <script>
+            function Person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+            var myFather = new Person("John", "Doe", 50, "blue");
+            var myMother = new Person("Sally", "Rally", 48, "green");
+            document.getElementById("prototype").innerHTML =
+            "My father is " + myFather.age + ". My mother is " + myMother.age;
+        </script>
+
+    </body>
+</html>

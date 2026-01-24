@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lecture 2: JQuery Page </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            /*
+            Basic syntax is: $(selector).action()
+            ○ A $ sign to define/access jQuery
+            ○ A (selector) to "query (or find)" HTML elements
+            ○ A jQuery action() to be performed on the element(s)
+
+            ● $(this).hide() - hides the current element.
+            ● $("p").hide() - hides all <p> elements.
+            ● $(".test").hide() - hides all elements with class="test".
+            ● $("#test").hide() - hides the element with id="test".
+            */
+            $(document).ready(function(){
+                /* $(document).ready(func()) prevent any jQuery code from running 
+                   before the document is finished loading (is ready) */
+                $(".ex1").click(function(){
+                    $("p").hide();
+                });
+
+                $(".ex2").click(function(){
+                    $("#test").hide();
+                });
+                
+                /*load externak file */
+                $(".ajax").click(function(){
+                    $("#div1").load("lecture1_notes.txt", function(responseTxt, statusTxt, xhr){
+                        if(statusTxt == "success")
+                            alert("External content loaded successfully!");
+                        if(statusTxt == "error")
+                            alert("Error: " + xhr.status + ": " + xhr.statusText);
+                    });
+                });
+
+                /* POST*/
+                $(".posting").click(function(){
+                    $.post("demo_test_post.asp",
+                    {
+                        name: "Donald Duck",
+                        city: "Duckburg"
+                    },
+                    function(data,status){
+                        alert("Data: " + data + "\nStatus: " + status);
+                    });
+                });
+            });
+
+           
+
+            
+
+        </script>
+    </head>
+
+    <body>
+        <h2>This is a heading</h2>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+        <button class = "ex1">Click me to hide ALL paragraphs</button>
+
+        <p id="test">This is another paragraph.</p>
+        <button class="ex2">Click me to hide only above</button>
+
+        <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+        <button class="ajax">Get External Content</button>
+
+        <button class="posting">POST some data to ext files</button>
+    </body>
+</html>

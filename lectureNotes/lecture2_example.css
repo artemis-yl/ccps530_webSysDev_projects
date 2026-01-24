@@ -1,0 +1,149 @@
+/*external  CSS file for lecture 2*/
+
+/* 
+ * SELECTORS are cass sensitive!
+ * FONT SIZE deafult to 16px => default 1(r)em = 16px
+ */
+
+ /*Universal selectors 
+  * often used to remove the default margins and
+    paddings from the elements for quick testing purpose.
+  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Element type selectors
+ */
+body{
+    background-color:rgb(207, 228, 198);
+    font: 18px Arial, Helvetica, sans-serif; 
+        /*if 1st font not avail, then try next*/
+    text-align: center;
+}
+
+p{
+    color: rgb(52, 73, 139);
+    font-size: 15px;
+}
+
+/* ID selector  
+ * deﬁne style rules for a single or unique element
+ */
+#unique-box {
+    background: #fff3bf;
+    border: 1px solid blue;
+    color: #5a3e00;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius:  6px;
+    font-style: italic;
+}
+
+/* Class selectors
+ * can be used to select any HTML element that has a class attribute. 
+  * All the elements having that class will be formatted according to the deﬁned rule.
+ */
+.blue {
+    color: blue;
+}
+/* only the <p> elements that has class attribute 'blue' */
+p.blue {
+    color: rgb(0, 225, 255);
+}
+
+/*Child selectors
+ * select only those elements that are the direct children of some element
+ * always parent > child
+ */
+ul > li {
+    color: rgb(74, 143, 120);
+    list-style: square;
+    margin-left: 10%;
+    text-align: left;
+}
+
+
+/*Grouping selectors
+ * Many similar elementsoften have same properties, so grouped in a list
+ */
+h1, h2, h3 {
+    font-weight: bold;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.25em;
+}
+
+/* Links 
+ */
+a:link {
+    /* unvisited link */
+    color: #f00;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+a:visited {
+    /* visited link */
+    color: #f0f;
+}
+a:hover {
+    /* mouse over link */
+    color: #0f0;
+    border-bottom: none;
+}
+a:active {
+    /* active link */
+    color: #0ff;
+}
+/*button style links
+ */
+.button{
+    color: white;
+    background-color: #1ebba3;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #099983;
+    text-decoration: none;
+    text-align: center;
+    font: 14px Arial, sans-serif;
+}
+a:hover.button, a:active.button{
+    background-color: #9c6ae1;
+    border-color: #7443b6;
+}
+
+/* CSS box model
+ */
+div {
+    width: 30px;
+    height: 20px;
+    padding: 15px; /* set padding for all four sides */
+    margin: 20px auto; /* set top and bottom margin to 20 pixels, and left and
+                          right margin to auto */
+ /* margin: 25px 50px 75px 100px; /* top | right | bottom | left */
+
+    border: 10px solid black; /* set border for all four sides */
+    border-radius: 10px;
+    outline-style: dotted;
+    outline-color: #12853e;
+/*  ○ Outlines do not take up space, because  always placed on top of the box 
+        => may cause them to overlap other elements on the page
+        => do not change the size or position of the element.
+    ○ Outlines won't allow us to set each edge; is the same on all sides.
+    ○ Outlines do not have any impact on surrounding elements apart from overlapping.
+    ○ Outlines may be non-rectangular, but you cannot create circular outlines.   
+*/
+    overflow:scroll; 
+    /* visible: default, will show all no matter what
+     * hidden: clipped content is hidden
+     * scroll: clipped is hidden but can be scrolled to see
+     * auto: provide scrollbars
+     */
+}
