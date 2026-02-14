@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*To prevent navbar from hiding top content*/
+body{
+    padding-top: 80px;
+}
+
+.navbar-custom{
+    background-color: rgb(100, 20, 100);
+    color: white;
+}
+
+img.icon{
+    max-width: 50px;
+    margin-left: 10px;
+}
+
+/*Background styling*/
+/*You must use <div> tags to organize and style your content.*/
+
+
+.light-box{
+    background-color:rgb(235, 240, 235);
+}
+.dark-box{
+    background-color:rgb(190, 200, 190);
+}
+
+h1,h2,h3,h4,h5, h6{
+    color: rgb(100, 20, 100);
+    font-weight: bold;
+}
+
+/* List Styling */
+ul{
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+li{
+    padding: 5pt;
+    margin-left: 5%;
+}
+
+/*Table Styling*/
+table{
+    margin: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+th, td.date{
+    font: 1rem;
+    width: 40%;
+    padding: 1%;
+    background-color: rgb(100, 20, 100);
+    text-align: right;
+    color: white;
+}
+td.date{
+    font-size: smaller;
+}
+td{
+    padding-left: 2%;
+}
+br.table{
+    padding: 1%;
+}
+
+/*carasol styling*/
+.carousel-item p{
+    color: rgb(255, 255, 255);
+    background-color: rgba(125, 125, 125, 0.534);
+}

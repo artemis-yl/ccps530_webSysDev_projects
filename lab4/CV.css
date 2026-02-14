@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*This is Flexbox, selected for easy center-alignment*/
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+footer, header{
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+    background-color: rgb(100, 20, 100);
+    color: white;
+}
+img{
+    max-width: 75px;
+    height: auto;
+    align-content: center;
+}
+img.icon{
+    padding: 1%; 
+}
+img.crop{
+    clip-path: circle(20%);
+}
+
+h1{
+    font-size: 40pt;
+}
+h2,h3{
+    color: rgb(100, 20, 100);
+}
+h3,h4{
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+p{
+    font-size: 12pt;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+ul{
+    font-size: 12pt;
+    text-align: left;
+    margin-left: 1%;
+    margin-right: 10%;
+}
+li{
+    padding-left: 5pt;
+}
+
+/* this is a horizontal rule i.e. linebreak*/
+hr{
+    width:75%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+/*Background styling*/
+/*You must use <div> tags to organize and style your content.*/
+.light_box, .dark_box{
+    padding: 2.5%; 
+    width: 100%;
+   
+}
+.light_box{
+
+    background-color:rgb(235, 240, 235);
+}
+.dark_box{
+
+    background-color:rgb(190, 200, 190);
+}
+
+/*Table Styling*/
+table{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+th, td.date{
+    width: 40%;
+    padding: 0.5%;
+    background-color: rgb(100, 20, 100);
+    text-align: right;
+    color: white;
+}
+td.date{
+    font-size: smaller;
+}
+td{
+    padding-left: 2%;
+}
