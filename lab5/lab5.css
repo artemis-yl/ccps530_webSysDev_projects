@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*General Colouring/Style*/
+body{
+    background-color:rgb(190, 200, 190);
+}
+
+.navbar-custom{
+    background-color: rgb(100, 20, 100);
+    color: rgb(190, 200, 190);
+}
+h1{
+    color: rgb(100, 20, 100);
+}
+
+/*the slideshow styling*/
+slideshow-container{
+    overflow:hidden;
+    position: relative;
+    width: auto;
+}
+slide{
+    overflow: hidden;
+    position: relative;
+    margin: 10px;
+    padding: 0;
+}
+p.slide-caption{
+    font-size: 1rem;
+    color: rgb(100, 20, 100);
+    padding: 10px;
+}

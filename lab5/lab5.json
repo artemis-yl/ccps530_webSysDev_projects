@@ -1,0 +1,18 @@
+[
+    {
+        "image" : "planetarygear_1-5ratio_v2.PNG",
+        "description" : "A 1:5-ratio planetary gear assembly, made in SolidWorks"
+    },
+    {
+        "image" : "scotchyokeAssembly_v2.PNG",
+        "description" : "A scotch-yoke mechanism assembly, made in SolidWorks"
+    },
+    {
+        "image" : "screwdriverAssembly_v2.PNG",
+        "description" : "A screwdriver with a planetary gear set, made in SolidWorks. The outer shell is transparent."
+    },
+    {
+        "image" : "SolarShipCapstoneSpringCloseUp_v2.JPG",
+        "description" : "A closeup view of the spring and lower crossection of the valve. Made and rendered in SolidWorks"
+    }
+]
