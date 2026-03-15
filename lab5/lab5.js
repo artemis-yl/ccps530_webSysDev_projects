@@ -1,6 +1,5 @@
 $(document).ready(function(){
     /* array of slides' image and description file paths
-     * - 1st key is image file paths and 2nd key is corresponding description file paths
      * Requirement #4.3 : "Must cycle through at least four different images.
      */
     const slides = [
@@ -20,7 +19,7 @@ $(document).ready(function(){
     
     let index = 0;
     
-    // Function to load the current slide
+    // will load the current slide w/ ajax
     function loadSlide() {
         // a slide is the image and the description below it
         // the relative positioning is done in HTML/CSS
@@ -31,13 +30,16 @@ $(document).ready(function(){
             url: currentSlide.image,
             type: "GET",
             xhrFields: {
-                // has to be blob to get raw binary 
-                // and properly load image files
-                // works with URL.createObjectURL(data)
+                /* basically, no datatype: image => need to use base XMLHttpRequest
+                 * set XMLHttpRequest to  blob to get raw binary 
+                 *
+                 * works with URL.createObjectURL(data) below
+                 */
                 responseType: "blob"
             },
+            // load the image into the ".slide-image" element
             success: function(data) {
-                const url = URL.createObjectURL(data);
+                const url = URL.createObjectURL(data); // temp URL
                 $(".slide-image").attr("src", url);
             }
         });
@@ -47,6 +49,7 @@ $(document).ready(function(){
             url: currentSlide.description,
             type: "GET",
             dataType: "text",
+            // load the description into the ".slide-caption" element
             success: function(data) {
                 $(".slide-caption").text(data);
             }
@@ -71,10 +74,13 @@ $(document).ready(function(){
         // Requirement #4.2.2 : "Use a JS loop to cycle each image every 2 seconds".
         while(true) {
             loadSlide();
-            await delay(delayTime); // Wait for 2 seconds before loading the next slide
+            await delay(delayTime); 
         }
     }
     
-    // start the slide loop
+    // start the slide loop, with 2sec/2000ms delay between slides
     slideLoopWithDelay(2000);
+
+    /* NOTE: setInterval(loadSlide, 2000) fails because non-blocking and AJAX is async
+     */
 });

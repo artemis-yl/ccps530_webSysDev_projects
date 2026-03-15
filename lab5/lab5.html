@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- NO JavaScript for Bootstrap-->
+    <!-- NO JavaScript for Bootstrap : not required for basic navbar-->
     <!-- jQuery JavaScript -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 
@@ -30,16 +30,18 @@
         <span class="navbar-brand ">Artemis Lee</span>
         <span class="navbar-item mx-auto">Lab 5 Portfolio Sample</span>
     </nav>
+
     <!-- Requirement #4.1 : "Under the navbar, you must have a div section..."-->  
-     <!-- Used container/grid to handle overall responsiveness --> 
+    <!--   - Used container/grid to handle overall responsiveness --> 
      <div class="container-fluid">
         <div class="row justify-content-center ">
                 <div class="col-md-8 text-center">
                     <div class="slideshow-container">
                         <div class="slide">
-                            <!-- note: img-fluid ensures it scales-->
-                             <!-- note: needs a default src for HTML5 compliance-->
+                            <!-- note: img-fluid ensures responsiveness-->
+                            <!-- note: needs a default src for HTML5 compliance-->
                             <img class="slide-image img-fluid" src="image1.PNG" alt="Slideshow Image">
+                            
                             <!-- Requirement #5.1 : "Under the images, you need to have a description."-->
                             <p class="slide-caption">Description</p>
                         </div>

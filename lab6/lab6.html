@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--External CSS, on top of Bootstrap. Therefore after Bootstrap line-->
+    <link rel="stylesheet" href="lab6.css">
+
+    <title>CCPS530 Lab 5</title>
+</head>
+
+<body>
+    <!-- NO JavaScript for Bootstrap : not required for basic navbar nor grid-->
+    <!-- jQuery JavaScript -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+    <!-- custom JavaScript/jQuery -->
+    <script src="lab6.js"></script>
+
+    <!-- Requirement #3 : "You must use the Bootstrap navbar"-->
+    <nav class="navbar navbar-expand navbar-dark navbar-custom">
+        <!-- Requirement #1 : "Name clearly on page"-->
+        <span class="navbar-item ">Artemis Lee</span>
+        <span class="navbar-brand mx-auto">Lab 6: Car Information</span>
+    </nav>
+
+    <!-- Requirement #4.1 : "JSON must be consumed and placed in a Bootstrap grid"-->  
+    <div class="container-fluid">
+
+        <!-- Car Name and Model Year -->
+        <div class="row justify-content-center ">
+                <div class="col-md-8 text-center">
+                    <h1 id="car-model">Car Model</h1>
+                    <p id="car-year">Car Year</p>
+                </div>
+        </div>
+
+        <!-- Car Image -->
+        <div class="row justify-content-center ">
+            <div class="col-md-8 text-center">
+                <div id="car-image"></div>
+            </div>
+        </div>
+
+        <!-- Specifications Title -->
+        <div class="row justify-content-center ">
+            <div class="col-12 text-center">
+                <p class="font-weight-bold">SPECIFICATIONS</p>
+            </div>
+            <!-- Engine and Brake Info -->
+            <div class="col-md-4">
+                <p class="text-center font-weight-bold">Engine</p>
+                <table class="table table-sm">
+                    <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <td id="engine-type-info">EI</td>
+                        </tr>
+                        <tr>
+                            <th>Configuration</th>
+                            <td id="engine-config-info">EC</td>
+                        </tr>
+                        <tr>
+                            <th>Size</th>
+                            <td id="engine-size-info">ES</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <p class="text-center font-weight-bold">Brakes</p>
+                <table class="table table-sm">
+                    <tbody>
+                        <tr>
+                            <th>Front</th>
+                            <td id="brake-front-info">BF</td>
+                        </tr>
+                        <tr>
+                            <th>Back</th>
+                            <td id="brake-back-info">BB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- END last row -->
+    </div> <!-- END container -->
+
+</body>
+
+
+</html>
