@@ -1,0 +1,16 @@
+{
+  "name": "lab7",
+  "version": "1.0.0",
+  "description": "lab7 book inventory",
+  "license": "ISC",
+  "author": "Artemis Lee",
+  "type": "commonjs",
+  "main": "lab7_bookInventory.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
